@@ -14,12 +14,12 @@ function UserData(){
 }
 */
 
-function CoreConcept(props) {
+function CoreConcept({image, title, description}) {
   return (
     <li>
-      <img src={props.image} alt={props.image} />
-      <h3>{props.title}</h3>
-      <p>{props.description}</p>
+      <img src={image} alt={image} />
+      <h3>{title}</h3>
+      <p>{description}</p>
     </li>
   )
 }
@@ -72,6 +72,9 @@ function App() {
               ...CORE_CONCEPTS[3]
               }
             />
+            {
+              ///CORE_CONCEPTS.map((concept)=><CoreConcept {...concept}/>)
+            }
           </ul>
         </section>
       </main>
@@ -88,4 +91,6 @@ Notes:
 Create CoreConcepts(), Then created specialized ver. passing {props.???}, Make sure you import assest
 Downloaded data.js and placed into src folder.
 !! Shortcut: Cmd + D while hove over a repeated element selects every dupe after per shorcut. Fast replace!
+..."NAME[i}"  This is a Spread operator
+Line 76: CORE_CONCEPTS.map  Does same thing but in single line. Advanced
 */
