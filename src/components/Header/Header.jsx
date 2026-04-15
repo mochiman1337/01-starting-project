@@ -1,4 +1,6 @@
-import reactImg from './assets/react-core-concepts.png';
+import reactImg from '../../assets/react-core-concepts.png';
+import './Header.css';
+//two dots means to go back 1 folder first
 
 const reactDescriptions = ('Fundamental', 'Crucial', 'Core');
 function genRandomInt(max) {
@@ -25,4 +27,5 @@ Notes:
 Import reactImg  Copied over
 Copied Header function from App.jsx and re-arranged them a little
 export default ...   When you use this file as a import, the thing you'll get by default is "Header"
+Moving components to its own files
 */
