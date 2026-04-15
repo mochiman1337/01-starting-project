@@ -53,24 +53,24 @@ function App() {
           <h2>Time to get started!</h2>
           <ul>
             <CoreConcept
-              title = {CORE_CONCEPTS[0].title}
-              description = {CORE_CONCEPTS[0].description}
-              image ={CORE_CONCEPTS[0].image}
+              {
+              ...CORE_CONCEPTS[0]
+              }
             />
             <CoreConcept
-              title = {CORE_CONCEPTS[1].title}
-              description = {CORE_CONCEPTS[1].description}
-              image ={CORE_CONCEPTS[1].image}
+              {
+              ...CORE_CONCEPTS[1]
+              }
             />
             <CoreConcept
-              title = {CORE_CONCEPTS[2].title}
-              description = {CORE_CONCEPTS[2].description}
-              image ={CORE_CONCEPTS[2].image}
+              {
+              ...CORE_CONCEPTS[2]
+              }
             />
             <CoreConcept
-              title = {CORE_CONCEPTS[3].title}
-              description = {CORE_CONCEPTS[3].description}
-              image ={CORE_CONCEPTS[3].image}
+              {
+              ...CORE_CONCEPTS[3]
+              }
             />
           </ul>
         </section>
@@ -88,5 +88,4 @@ Notes:
 Create CoreConcepts(), Then created specialized ver. passing {props.???}, Make sure you import assest
 Downloaded data.js and placed into src folder.
 !! Shortcut: Cmd + D while hove over a repeated element selects every dupe after per shorcut. Fast replace!
-
 */
