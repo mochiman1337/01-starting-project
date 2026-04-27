@@ -5,3 +5,5 @@ import "./index.css";
 
 const entryPoint = document.getElementById("root");
 ReactDOM.createRoot(entryPoint).render(<App />);
+
+//ReactDOM.createRoot(entryPoint).render(React.createElement(App)); Another way to do this

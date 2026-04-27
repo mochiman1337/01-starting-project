@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import CoreConcept from './components/CoreConcept/CoreConcept';
 import TabButton from './components/TabButton/TabButton';
 import { useState } from 'react';//Hook
+import CoreConcepts from './components/CoreConcept/CoreConcepts';// We need to add this for coreconcepts to work
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -26,21 +27,12 @@ function App() {
     setSelectedTopic(selectedButton);
     console.log(selectedTopic)
   }
+  //You must have at least ONE PARENT element, like <div> to work. Changed to <> shorthand
   return (
-    <div>
+    <>
       <Header />
       <main>
-        <section id="core-concepts">
-          <h2>Time to get started!</h2>
-          <ul>
-            {
-              //I have an array of JS objects but i need a Array of HTML elements
-              [
-                CORE_CONCEPTS.map((conceptItem)=> <CoreConcept {...conceptItem} />)
-              ]
-            }
-          </ul>
-        </section>
+        <CORE_CONCEPTS />
         <section id="examples">
           <h2>Examples</h2>
           <menu>
@@ -51,7 +43,7 @@ function App() {
           </menu>
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
@@ -70,4 +62,6 @@ Introduced TabButton Component, and relevant paths and code.
 
 Function that calls a function = callback
 ()=> function() = anonymous function
+
+Pay attention to <sections> tags. This is a nice way to break up your webpage when designing components
 */
