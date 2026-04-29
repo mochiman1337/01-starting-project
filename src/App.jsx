@@ -4,6 +4,7 @@ import CoreConcept from './components/CoreConcept/CoreConcept';
 import TabButton from './components/TabButton/TabButton';
 import { useState } from 'react';//Hook
 import CoreConcepts from './components/CoreConcept/CoreConcepts';// We need to add this for coreconcepts to work
+import Examples from "./components/CoreConcept/Examples.jsx";//Added for Examples section
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -33,15 +34,7 @@ function App() {
       <Header />
       <main>
         <CORE_CONCEPTS />
-        <section id="examples">
-          <h2>Examples</h2>
-          <menu>
-            <TabButton isSelected={selectedTopic==="components"} onSelect={() => handleSelect("components")}>Components</TabButton>
-            <TabButton isSelected={selectedTopic==="jsx"} onSelect={() => handleSelect("jsx")}>JSX</TabButton>
-            <TabButton isSelected={selectedTopic==="props"} onSelect={() => handleSelect("props")}>Props</TabButton>
-            <TabButton isSelected={selectedTopic==="state"} onSelect={() => handleSelect("state")}>State</TabButton>
-          </menu>
-        </section>
+        <Examples />
       </main>
     </>
   );
